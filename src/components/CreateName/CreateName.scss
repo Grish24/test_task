@@ -1,0 +1,25 @@
+
+.form_group {
+  margin-bottom: 40px;
+  .form_input {
+    text-align: center;
+    font-size: 25px;
+    margin: 0 auto;
+    padding: 13px;
+    border-radius: 8px;
+    background-color: #F7F7FA;
+    border: none;
+    width: 100%;
+    display: block;
+    line-height: 19px;
+  }
+
+  .form_label {
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-bottom: 35px;;
+  }
+}
+
