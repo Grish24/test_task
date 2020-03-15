@@ -14,9 +14,9 @@ class App extends Component {
                 <section className='main_section'>
                     <Switch>
                         <Route path="/login" component={LoginContainer}/>
-                        <Route component={Registration}/>
                         <Route path='/welcome' component={WelcomeContainer}/>
-                        <Redirect to='/welcome'/>
+                        <Route component={Registration}/>
+                        {/*<Redirect to='/welcome'/>*/}
                     </Switch>
                 </section>
             </BrowserRouter>

@@ -17,6 +17,7 @@ class Content extends Component {
                         <Route path="/step2" component={CreateStyleContainer}/>
                         <Route path="/step3" component={CreateAccountContainer}/>
                         <Route path="/step4" component={CreateDoneContainer}/>
+                        <Redirect to='/welcome'/>
                     </Switch>
                 </div>
             </section>

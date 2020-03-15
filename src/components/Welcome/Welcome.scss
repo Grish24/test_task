@@ -1,0 +1,24 @@
+.welcome_container{
+  width: 100%;
+  .logout_wrapper{
+    margin-top: 30px;
+    .logout_button{
+      display: flex;
+      align-items: center;
+      color: #8B8B8B;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 13px 75px;
+      margin-left: auto;
+      margin-right: 170px;
+      border-radius: 15px;
+      background-color: #F7F7FA;
+      box-shadow: 0 6px 10px -5px rgba(201,204,203,0.35);
+      img {
+        margin-left: 4px;
+      }
+    }
+  }
+
+
+}

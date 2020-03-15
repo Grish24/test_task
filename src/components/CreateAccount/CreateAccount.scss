@@ -48,6 +48,10 @@
       font-size: 16px;
       color: #9D9D9E;
       text-align: left;
+      &::placeholder { /* Most modern browsers support this now. */
+        color:#9D9D9E;
+        font-weight: normal;
+      }
     }
     .form_group_name{
       display: flex;
@@ -61,6 +65,14 @@
           border-bottom-left-radius:0;
         }
       }
+    }
+    .password_visibility_icon{
+      position: absolute;
+      top: 50%;
+      right: 17px;
+      z-index: 9999999;
+      cursor: pointer;
+      transform: translate(0, -50%);
     }
   }
   .about_text{

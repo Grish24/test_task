@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './CreateAccount.scss'
 import {Link} from "react-router-dom";
 import google_icon from '../../assets/images/google_icon.svg';
+import eye_icon from '../../assets/images/password_visibility_icon.svg';
 
 class CreateAccount extends Component {
 
@@ -42,8 +43,8 @@ class CreateAccount extends Component {
                     <div className='form_wrapper'>
                         <div className="form_group">
                             <input type="password" className="form_input" id="password" placeholder="Password" value={this.props.password} required="" onChange={this.onChangePassword} />
+                            <span className="password_visibility_icon"><img src={eye_icon} alt=""/></span>
                         </div>
-                        <span className=""></span>
                     </div>
                 </form>
                 <p className='about_text'>By registering an account with us you agree to the PP and T&C</p>

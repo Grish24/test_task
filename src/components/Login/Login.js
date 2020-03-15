@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import google_icon from "../../assets/images/google_icon.svg";
 import {Link} from "react-router-dom";
 import {Route, Switch,Redirect} from 'react-router-dom'
-
+import '../CreateAccount/CreateAccount.scss'
+import logo from '../../assets/images/hoory_logo.svg'
+import eye_icon from "../../assets/images/password_visibility_icon.svg";
 
 class Login extends Component {
     onChangeEmail = (event) => {
@@ -22,6 +24,9 @@ class Login extends Component {
         console.log(this.props)
         return (
             <div className='sign_in_account create_account'>
+                <div className='logo'>
+                    <img src={logo} alt=""/>
+                </div>
                 <h3>Sign in to your account</h3>
                 <button className='google_sign_up'>
                     <img src={google_icon} alt=""/>
@@ -31,15 +36,15 @@ class Login extends Component {
                     <span>or</span>
                 </div>
                 <form className='registration_form'>
-
                     <div className="form_group">
                         <input type="text" className="form_input" id="email" placeholder="Email" value={this.props.email} required="" onChange={this.onChangeEmail} />
                     </div>
                     <div className='form_wrapper'>
                         <div className="form_group">
                             <input type="text" className="form_input" id="password" placeholder="Password" value={this.props.password} required="" onChange={this.onChangePassword} />
+                            <span className="password_visibility_icon"><img src={eye_icon} alt=""/></span>
+
                         </div>
-                        <span className=""></span>
                     </div>
                 </form>
                 <button type='button'

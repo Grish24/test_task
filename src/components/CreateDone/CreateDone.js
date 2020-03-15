@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
 import './CreateDone.scss'
 import {Link} from "react-router-dom";
+import { ReactComponent as Logo } from '../../assets/images/hoory_grey.svg'
 
 class CreateDone extends Component {
     render() {
         return (
             <div className='container_done'>
-                <img src="" alt=""/>
-                <h3>Fantastico</h3>
+                <div className='logo'>
+                    <Logo/>
+                </div>
+                <h3>Fantastico &#x1F389; </h3>
 
                 <p className='done_text'>
                     You have successfully setup the Hoory widget on your website! <br/>

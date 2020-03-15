@@ -1,16 +1,13 @@
 import React, {Component} from 'react';
 import './LeftMenu.scss'
-
+import logo from '../assets/images/hoory_logo_white.png'
 
 
 class LeftMenu extends Component {
     render() {
         return (
             <div className='left_menu'>
-                <div className='logo'>
-                    <img src="" alt=""/>
-                    <h2>hoory</h2>
-                </div>
+                <img src={logo} alt=""/>
                 <div className='splitter'></div>
                 <div>
                     <div className='custom_checkbox'>

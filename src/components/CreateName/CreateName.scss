@@ -1,4 +1,24 @@
-
+.hoory_logo{
+  background-image: url("../../assets/images/hoory_bg.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 140px;
+  height: 130px;
+  margin: 0 auto;
+  position: relative;
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    path {
+      fill: #EEEEF2;
+    }
+  }
+}
+.title {
+  margin-bottom: 75px;
+}
 .form_group {
   margin-bottom: 40px;
   .form_input {
@@ -12,6 +32,10 @@
     width: 100%;
     display: block;
     line-height: 19px;
+    &::placeholder { /* Most modern browsers support this now. */
+      color:#444444;
+      font-weight: 500;
+    }
   }
 
   .form_label {

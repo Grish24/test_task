@@ -5,6 +5,15 @@
     text-align: center;
     margin-bottom: 35px;
   }
+  .logo{
+    text-align: center;
+    margin-bottom: 20px;
+    svg {
+      path {
+        fill: #694AFB;
+      }
+    }
+  }
   .done_text{
     text-align: center;
     margin-bottom: 30px;
