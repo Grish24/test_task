@@ -8,7 +8,8 @@ class CreateName extends Component {
         this.props.setCreateName(event.target.value)
     };
     onChangeStep = () => {
-        this.props.setStep(true);
+        document.getElementById('step1').checked = true;
+        // this.props.setStep(true);
     };
 
     render() {

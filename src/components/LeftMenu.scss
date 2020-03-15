@@ -18,9 +18,8 @@ $gray:  white;
     -webkit-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-    cursor: pointer;
+    //cursor: pointer;
     margin-bottom: 0;
-
     span {
       display: inline-block;
       vertical-align: middle;
@@ -77,23 +76,23 @@ $gray:  white;
         margin-left: 8px;
         font-size: 15px;
 
-        &:after {
-          content: "";
-          position: absolute;
-          top: 8px;
-          left: 0;
-          height: 1px;
-          width: 100%;
-          background: $gray;
-          transform-origin: 0 0;
-          transform: scaleX(0);
-        }
+        //&:after {
+        //  content: "";
+        //  position: absolute;
+        //  top: 8px;
+        //  left: 0;
+        //  height: 1px;
+        //  width: 100%;
+        //  background: $gray;
+        //  transform-origin: 0 0;
+        //  transform: scaleX(0);
+        //}
       }
     }
 
-    &:hover span:first-child {
-      border-color: $primary;
-    }
+    //&:hover span:first-child {
+    //  border-color: $primary;
+    //}
   }
 
   .inp-cbx {

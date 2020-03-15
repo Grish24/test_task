@@ -18,6 +18,13 @@ class CreateAccount extends Component {
     onChangePassword = (event) => {
         this.props.setPassword(event.target.value)
     };
+    showPassword = () =>{
+        this.refs.password.type == 'password' ? this.refs.password.type = 'text' :  this.refs.password.type = 'password';
+    };
+    onChangeStep = () => {
+        document.getElementById('step3').checked = true;
+        // this.props.setStep(true);
+    };
     render() {
         return (
             <div className='create_account'>
@@ -41,8 +48,8 @@ class CreateAccount extends Component {
                     </div>
                     <div className='form_wrapper'>
                         <div className="form_group">
-                            <input type="password" className="form_input" id="password" placeholder="Password" value={this.props.password} required="" onChange={this.onChangePassword} />
-                            <span className="password_visibility_icon"><img src={eye_icon} alt=""/></span>
+                            <input type="password" className="form_input" id="password" ref='password' placeholder="Password" value={this.props.password} required="" onChange={this.onChangePassword} />
+                            <span className="password_visibility_icon" onClick={this.showPassword}><img src={eye_icon} alt=""/></span>
                         </div>
                     </div>
                 </form>
@@ -50,6 +57,7 @@ class CreateAccount extends Component {
                 <Link to="/step4">
                     <button type='button'
                             className='submit_button'
+                            onClick={this.onChangeStep}
                     >
                         Create account
                     </button>

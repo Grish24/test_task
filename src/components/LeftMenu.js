@@ -11,7 +11,7 @@ class LeftMenu extends Component {
                 <div className='splitter'></div>
                 <div>
                     <div className='custom_checkbox'>
-                        <input className="inp-cbx" id="step1" type="checkbox"/>
+                        <input className="inp-cbx" id="step1" disabled type="checkbox"/>
                         <label className="cbx"
                                htmlFor="step1">
                             <span>
@@ -23,7 +23,7 @@ class LeftMenu extends Component {
                         </label>
                     </div>
                     <div className='custom_checkbox'>
-                        <input className="inp-cbx" id="step2" type="checkbox"/>
+                        <input className="inp-cbx" id="step2" disabled type="checkbox"/>
                         <label className="cbx"
                                htmlFor="step2">
                             <span>
@@ -35,7 +35,7 @@ class LeftMenu extends Component {
                         </label>
                     </div>
                     <div className='custom_checkbox'>
-                        <input className="inp-cbx" id="step3" type="checkbox"/>
+                        <input className="inp-cbx" id="step3" disabled type="checkbox"/>
                         <label className="cbx"
                                htmlFor="step3">
                             <span>
