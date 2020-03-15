@@ -19,7 +19,6 @@ class CreateAccount extends Component {
         this.props.setPassword(event.target.value)
     };
     render() {
-        console.log(this.props)
         return (
             <div className='create_account'>
                 <h3>Create your account</h3>

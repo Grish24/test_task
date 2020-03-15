@@ -8,8 +8,8 @@ class CreateStyle extends Component {
     onChangeGender = (event) => {
 
     };
-    onChangeColor = () => {
-
+    onChangeColor = (event) => {
+        console.log(event.target)
     };
     render() {
         console.log(this.props.name);
@@ -22,13 +22,13 @@ class CreateStyle extends Component {
                 </div>
                 <h3>Select color scheme</h3>
                 <div className='color_icons'>
-                    <div className='color_one'></div>
-                    <div className='color_two'></div>
-                    <div className='color_tree'></div>
-                    <div className='color_for'></div>
-                    <div className='color_five'></div>
-                    <div className='color_six'></div>
-                    <div className='color_seven'></div>
+                    <div onClick={this.onChangeColor} className='color_one'></div>
+                    <div onClick={this.onChangeColor} className='color_two'></div>
+                    <div onClick={this.onChangeColor} className='color_tree'></div>
+                    <div onClick={this.onChangeColor} className='color_for'></div>
+                    <div onClick={this.onChangeColor} className='color_five'></div>
+                    <div onClick={this.onChangeColor} className='color_six'></div>
+                    <div onClick={this.onChangeColor} className='color_seven'></div>
                 </div>
                 <Link to="/step3">
                     <button type='button'
