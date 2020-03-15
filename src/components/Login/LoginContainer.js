@@ -6,8 +6,8 @@ import {setEmail,setPassword} from '../../store/Login/actions'
 class LoginContainer extends Component {
     render() {
         return (
-            <Login  store={this.props.store}
-                    email={this.props.email}
+            <Login store={this.props.store}
+                   email={this.props.email}
                    password={this.props.password}
                    setEmail={this.props.setEmail}
                    setPassword={this.props.setPassword}

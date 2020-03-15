@@ -45,7 +45,6 @@ class Login extends Component {
                         <div className="form_group">
                             <input type="password" className="form_input" ref='password' id="password" placeholder="Password" value={this.props.password} required="" onChange={this.onChangePassword} />
                             <span className="password_visibility_icon" onClick={this.showPassword}><img src={eye_icon} alt=""/></span>
-
                         </div>
                     </div>
                 </form>
