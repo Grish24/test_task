@@ -1,8 +1,10 @@
-.welcome_container{
+.welcome_container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  .logout_wrapper{
+  .logout_wrapper {
     margin-top: 30px;
-    .logout_button{
+    .logout_button {
       display: flex;
       align-items: center;
       color: #8B8B8B;
@@ -13,12 +15,35 @@
       margin-right: 170px;
       border-radius: 15px;
       background-color: #F7F7FA;
-      box-shadow: 0 6px 10px -5px rgba(201,204,203,0.35);
+      box-shadow: 0 6px 10px -5px rgba(201, 204, 203, 0.35);
       img {
         margin-left: 4px;
       }
     }
   }
-
-
+  .welcome_wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    .welcome_block{
+      width: 350px;
+      margin: 0 auto;
+      text-align: center;
+      .hoory_logo{
+        svg {
+          path{
+            fill: #652EFB;
+          }
+        }
+      }
+      h3 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      h4 {
+        font-weight: 500;
+      }
+    }
+  }
 }

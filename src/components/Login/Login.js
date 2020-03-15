@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import google_icon from "../../assets/images/google_icon.svg";
 import {Link} from "react-router-dom";
-import {Route, Switch,Redirect} from 'react-router-dom'
 import '../CreateAccount/CreateAccount.scss'
 import logo from '../../assets/images/hoory_logo.svg'
 import eye_icon from "../../assets/images/password_visibility_icon.svg";
@@ -17,7 +16,7 @@ class Login extends Component {
         if (this.props.store.createAccount.email === this.props.email && this.props.store.createAccount.password === this.props.password) {
 
         } else {
-            alert('no')
+            alert('wrong login or password')
         }
     };
     render() {
@@ -41,7 +40,7 @@ class Login extends Component {
                     </div>
                     <div className='form_wrapper'>
                         <div className="form_group">
-                            <input type="text" className="form_input" id="password" placeholder="Password" value={this.props.password} required="" onChange={this.onChangePassword} />
+                            <input type="password" className="form_input" id="password" placeholder="Password" value={this.props.password} required="" onChange={this.onChangePassword} />
                             <span className="password_visibility_icon"><img src={eye_icon} alt=""/></span>
 
                         </div>
@@ -53,7 +52,7 @@ class Login extends Component {
                 >
                     Sign In
                 </button>
-                <p className='sign_in_text'>Don՞t have an account? <a href="">Sign Up</a></p>
+                <p className='sign_in_text'>Don՞t have an account? <Link to='/step1'>Sign Up</Link></p>
                 <p className='sign_in_text'><a href="">Forgot password?</a></p>
             </div>
         );

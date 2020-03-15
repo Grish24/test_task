@@ -5,9 +5,15 @@ import {connect} from 'react-redux'
 class WelcomeContainer extends Component {
     render() {
         return (
-            <Welcome />
+            <Welcome store={this.props.store}/>
         );
     }
 }
+const mapStateToProps = state => {
+    return {
+        store:state,
+    }
+};
 
-export default connect()(WelcomeContainer);
+
+export default connect(mapStateToProps,null)(WelcomeContainer);

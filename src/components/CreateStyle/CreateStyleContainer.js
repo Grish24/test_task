@@ -15,7 +15,5 @@ const mapStateToProps = state => {
         name:state.createName.name
     }
 };
-const mapDispatchToProps = {
 
-};
-export default connect(mapStateToProps)(CreateStyleContainer);
+export default connect(mapStateToProps,null)(CreateStyleContainer);

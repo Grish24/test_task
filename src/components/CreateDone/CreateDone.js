@@ -10,18 +10,19 @@ class CreateDone extends Component {
                 <div className='logo'>
                     <Logo/>
                 </div>
-                <h3>Fantastico &#x1F389; </h3>
+                <h3>Fantastico <span aria-labelledby='greeting' role='img'>&#x1F389;</span> </h3>
 
                 <p className='done_text'>
                     You have successfully setup the Hoory widget on your website! <br/>
                     Proceed to Admin Dashboard to start training %name%
                 </p>
-
-                <button type='button'
-                        className='submit_button'
-                >
-                    <Link to="/login">Go to Admin Dashboard</Link>
-                </button>
+                <Link to="/login">
+                    <button type='button'
+                            className='submit_button'
+                    >
+                        Go to Admin Dashboard
+                    </button>
+                </Link>
             </div>
         );
     }

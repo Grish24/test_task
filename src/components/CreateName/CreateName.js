@@ -1,35 +1,36 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
 import './CreateName.scss'
-import { ReactComponent as Logo } from '../../assets/images/hoory_grey.svg'
+import {ReactComponent as Logo} from '../../assets/images/hoory_grey.svg'
 
 class CreateName extends Component {
     onChangeName = (event) => {
         this.props.setCreateName(event.target.value)
     };
     onChangeStep = () => {
-      this.props.setStep(true);
+        this.props.setStep(true);
     };
 
     render() {
         return (
             <div>
                 <div className='hoory_logo'>
-                    <Logo />
+                    <Logo/>
                 </div>
                 <h2 className='title'>hoory</h2>
                 <div className="form_group">
                     <label htmlFor="name" className="form_label">Name your assistant</label>
-                    <input type="text" className="form_input" id="name" placeholder="Hoory" required="" onChange={this.onChangeName} />
+                    <input type="text" className="form_input" id="name" placeholder="Hoory" required=""
+                           onChange={this.onChangeName}/>
                 </div>
-
-                <button type='button'
-                        className='submit_button'
-                        onClick={this.onChangeStep}
-                >
-                    <Link to="/step2">Start</Link>
-                </button>
-
+                <Link to="/step2">
+                    <button type='button'
+                            className='submit_button'
+                            onClick={this.onChangeStep}
+                    >
+                        Start
+                    </button>
+                </Link>
 
             </div>
         );

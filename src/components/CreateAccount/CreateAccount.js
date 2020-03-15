@@ -48,12 +48,13 @@ class CreateAccount extends Component {
                     </div>
                 </form>
                 <p className='about_text'>By registering an account with us you agree to the PP and T&C</p>
-
-                <button type='button'
-                        className='submit_button'
-                >
-                    <Link to="/step4">Create account</Link>
-                </button>
+                <Link to="/step4">
+                    <button type='button'
+                            className='submit_button'
+                    >
+                        Create account
+                    </button>
+                </Link>
                 <p className='sign_in_text'>Have an account? <a href="">Sign In</a></p>
             </div>
         );

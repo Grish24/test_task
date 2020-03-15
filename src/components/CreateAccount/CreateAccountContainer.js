@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import CreateAccount from "./CreateAccount";
 import {setFirstName,setLastName,setEmail,setPassword,setStep} from '../../store/createAccount/actions';
-import createAccount from "../../store/createAccount/reducers";
 
 class CreateAccountContainer extends Component {
     render() {

@@ -30,11 +30,13 @@ class CreateStyle extends Component {
                     <div className='color_six'></div>
                     <div className='color_seven'></div>
                 </div>
-                <button type='button'
-                        className='submit_button'
-                >
-                    <Link to="/step3">Next</Link>
-                </button>
+                <Link to="/step3">
+                    <button type='button'
+                            className='submit_button'
+                    >
+                        Next
+                    </button>
+                </Link>
             </div>
         );
     }
