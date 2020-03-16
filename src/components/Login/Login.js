@@ -13,7 +13,7 @@ class Login extends Component {
         this.props.setPassword(event.target.value);
     };
     showPassword = () => {
-        this.refs.password.type == 'password' ? this.refs.password.type = 'text' :  this.refs.password.type = 'password';
+        this.refs.password.type === 'password' ? this.refs.password.type = 'text' :  this.refs.password.type = 'password';
     };
     login = () => {
         if (this.props.store.createAccount.email === this.props.email && this.props.store.createAccount.password === this.props.password) {

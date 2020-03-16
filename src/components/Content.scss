@@ -7,7 +7,11 @@
     margin: 0 auto;
   }
 }
-
+a {
+  &:hover{
+    color: white;
+  }
+}
 .title{
   font-size: 35px;
   font-weight: bold;

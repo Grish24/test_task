@@ -21,7 +21,7 @@
     justify-content: space-around;
     align-items: center;
     margin: 40px 0;
-
+    height: 75px;
     @mixin border($property) {
       border-radius: 50%;
       padding: 4px;
@@ -63,13 +63,13 @@
       background: linear-gradient(90deg, rgba(103, 176, 48, 1) 0%, rgba(150, 212, 68, 1) 49%);
     }
 
-    .color_tree {
+    .color_three {
       @extend .circle_color_style;
       background: rgb(250, 209, 92);
       background: linear-gradient(180deg, rgba(250, 209, 92, 1) 0%, rgba(247, 119, 35, 1) 50%);
     }
 
-    .color_for {
+    .color_four {
       @extend .circle_color_style;
       background: rgb(227, 65, 81);
       background: linear-gradient(247deg, rgba(227, 65, 81, 1) 0%, rgba(171, 15, 37, 1) 50%);

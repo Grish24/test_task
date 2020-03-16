@@ -19,7 +19,7 @@ class CreateAccount extends Component {
         this.props.setPassword(event.target.value)
     };
     showPassword = () =>{
-        this.refs.password.type == 'password' ? this.refs.password.type = 'text' :  this.refs.password.type = 'password';
+
     };
     onChangeStep = () => {
         document.getElementById('step3').checked = true;
@@ -44,7 +44,7 @@ class CreateAccount extends Component {
                         </div>
                     </div>
                     <div className="form_group">
-                        <input type="text" className="form_input" id="email" placeholder="Email" required="" value={this.props.email} onChange={this.onChangeEmail} />
+                        <input type="email" className="form_input" id="email" placeholder="Email" required="" value={this.props.email} onChange={this.onChangeEmail} />
                     </div>
                     <div className='form_wrapper'>
                         <div className="form_group">

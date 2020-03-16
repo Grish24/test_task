@@ -1,8 +1,8 @@
-export const setCreateName = name => ({
-    type: 'CREATE_NAME_TEXT',
+export const setCreatGender = name => ({
+    type: 'SELECT_GENDER',
         payload:name
 });
-export const setStep = value => ({
-    type : 'NEXT_STEP',
+export const setCreateColor = value => ({
+    type : 'SELECT_COLOR',
     payload:value
 });
