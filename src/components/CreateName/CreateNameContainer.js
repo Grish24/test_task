@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import CreateName from "./CreateName";
-import {setCreateName,setStep} from '../../store/createName/actions'
+import {setCreateName,setStep} from '../../store/actions/createName'
 
 class CreateNameContainer extends Component {
     render() {

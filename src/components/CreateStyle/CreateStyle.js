@@ -10,7 +10,8 @@ class CreateStyle extends Component {
        console.log(event.target)
     };
     onChangeColor = (event) => {
-
+        console.log(event.target);
+        event.stopPropagation();
     };
     onChangeStep = () =>{
         document.getElementById('step2').checked = true;
@@ -30,26 +31,26 @@ class CreateStyle extends Component {
                 </div>
                 <h3>Select color scheme</h3>
                 <div className='color_icons'>
-                    <div className='color_border'>
-                        <div onClick={this.onChangeColor} className='color_one'></div>
+                    <div onClick={this.onChangeColor} className='color_border'>
+                        <div className='color_one'></div>
                     </div>
-                    <div>
-                        <div onClick={this.onChangeColor} className='color_two'></div>
+                    <div onClick={this.onChangeColor}>
+                        <div  className='color_two'></div>
                     </div>
-                    <div>
-                        <div onClick={this.onChangeColor} className='color_tree'></div>
+                    <div onClick={this.onChangeColor}>
+                        <div  className='color_tree'></div>
                     </div>
-                    <div>
-                        <div onClick={this.onChangeColor} className='color_for'></div>
+                    <div onClick={this.onChangeColor}>
+                        <div  className='color_for'></div>
                     </div>
-                    <div>
-                        <div onClick={this.onChangeColor} className='color_five'></div>
+                    <div onClick={this.onChangeColor}>
+                        <div  className='color_five'></div>
                     </div>
-                    <div>
-                        <div onClick={this.onChangeColor} className='color_six'></div>
+                    <div onClick={this.onChangeColor}>
+                        <div  className='color_six'></div>
                     </div>
-                    <div>
-                        <div onClick={this.onChangeColor} className='color_seven'></div>
+                    <div onClick={this.onChangeColor}>
+                        <div  className='color_seven'></div>
                     </div>
                 </div>
                 <Link to="/step3">

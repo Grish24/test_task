@@ -62,7 +62,7 @@ class CreateAccount extends Component {
                         Create account
                     </button>
                 </Link>
-                <p className='sign_in_text'>Have an account? <a href="">Sign In</a></p>
+                <p className='sign_in_text'>Have an account? <Link to='/login'>Sign In</Link></p>
             </div>
         );
     }

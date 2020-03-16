@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import Login from "./Login";
-import {setEmail,setPassword} from '../../store/Login/actions'
+import {setEmail,setPassword} from '../../store/actions/login'
 
 class LoginContainer extends Component {
     render() {
