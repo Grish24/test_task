@@ -1,57 +1,96 @@
-.create_style{
+.create_style {
   h3 {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
   }
-  .gender_icons{
-      display: flex;
-      justify-content: center;
+
+  .gender_icons {
+    display: flex;
+    justify-content: center;
   }
 
-  .circle_color_style{
+  .circle_color_style {
     width: 60px;
     height: 60px;
     border-radius: 50%;
   }
-  .color_icons{
+
+  .color_icons {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin: 40px 0;
-      .color_one{
-        @extend .circle_color_style;
-        background: rgb(99,34,251);
-        background: linear-gradient(90deg, rgba(99,34,251,1) 0%, rgba(104,63,251,1) 49%);
+
+    @mixin border($property) {
+      border-radius: 50%;
+      padding: 4px;
+      border: 3px solid $property;
+    }
+
+    .color_border {
+      &:first-child{
+        @include border(rgb(99, 34, 251));
       }
-      .color_two{
-        @extend .circle_color_style;
-        background: rgb(103,176,48);
-        background: linear-gradient(90deg, rgba(103,176,48,1) 0%, rgba(150,212,68,1) 49%);
+      &:nth-child(2){
+        @include border(rgb(103, 176, 48));
       }
-      .color_tree{
-        @extend .circle_color_style;
-        background: rgb(250,209,92);
-        background: linear-gradient(180deg, rgba(250,209,92,1) 0%, rgba(247,119,35,1) 50%);
+      &:nth-child(3){
+        @include border(rgb(250, 209, 92));
       }
-      .color_for{
-        @extend .circle_color_style;
-        background: rgb(227,65,81);
-        background: linear-gradient(247deg, rgba(227,65,81,1) 0%, rgba(171,15,37,1) 50%);
+      &:nth-child(4){
+        @include border(rgb(227, 65, 81));
       }
-      .color_five{
-        @extend .circle_color_style;
-        background: rgb(164,91,205);
-        background: linear-gradient(302deg, rgba(164,91,205,1) 0%, rgba(84,52,183,1) 50%);
+      &:nth-child(5){
+        @include border(rgb(164, 91, 205));
       }
-      .color_six{
-        @extend .circle_color_style;
-        background: rgb(213,84,119);
-        background: linear-gradient(302deg, rgba(213,84,119,1) 0%, rgba(138,38,205,1) 50%);
+      &:nth-child(6){
+        @include border(rgb(213, 84, 119));
       }
-      .color_seven{
-        @extend .circle_color_style;
-        background: rgb(89,191,248);
-        background: linear-gradient(302deg, rgba(89,191,248,1) 0%, rgba(23,123,223,1) 50%);
+      &:nth-child(7){
+        @include border(rgb(89, 191, 248));
       }
+    }
+    .color_one {
+      @extend .circle_color_style;
+      background: rgb(99, 34, 251);
+      background: linear-gradient(90deg, rgba(99, 34, 251, 1) 0%, rgba(104, 63, 251, 1) 49%);
+    }
+
+    .color_two {
+      @extend .circle_color_style;
+      background: rgb(103, 176, 48);
+      background: linear-gradient(90deg, rgba(103, 176, 48, 1) 0%, rgba(150, 212, 68, 1) 49%);
+    }
+
+    .color_tree {
+      @extend .circle_color_style;
+      background: rgb(250, 209, 92);
+      background: linear-gradient(180deg, rgba(250, 209, 92, 1) 0%, rgba(247, 119, 35, 1) 50%);
+    }
+
+    .color_for {
+      @extend .circle_color_style;
+      background: rgb(227, 65, 81);
+      background: linear-gradient(247deg, rgba(227, 65, 81, 1) 0%, rgba(171, 15, 37, 1) 50%);
+    }
+
+    .color_five {
+      @extend .circle_color_style;
+      background: rgb(164, 91, 205);
+      background: linear-gradient(302deg, rgba(164, 91, 205, 1) 0%, rgba(84, 52, 183, 1) 50%);
+    }
+
+    .color_six {
+      @extend .circle_color_style;
+      background: rgb(213, 84, 119);
+      background: linear-gradient(302deg, rgba(213, 84, 119, 1) 0%, rgba(138, 38, 205, 1) 50%);
+    }
+
+    .color_seven {
+      @extend .circle_color_style;
+      background: rgb(89, 191, 248);
+      background: linear-gradient(302deg, rgba(89, 191, 248, 1) 0%, rgba(23, 123, 223, 1) 50%);
+    }
   }
 }

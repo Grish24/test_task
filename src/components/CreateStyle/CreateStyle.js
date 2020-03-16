@@ -30,13 +30,27 @@ class CreateStyle extends Component {
                 </div>
                 <h3>Select color scheme</h3>
                 <div className='color_icons'>
-                    <div onClick={this.onChangeColor} className='color_one'></div>
-                    <div onClick={this.onChangeColor} className='color_two'></div>
-                    <div onClick={this.onChangeColor} className='color_tree'></div>
-                    <div onClick={this.onChangeColor} className='color_for'></div>
-                    <div onClick={this.onChangeColor} className='color_five'></div>
-                    <div onClick={this.onChangeColor} className='color_six'></div>
-                    <div onClick={this.onChangeColor} className='color_seven'></div>
+                    <div className='color_border'>
+                        <div onClick={this.onChangeColor} className='color_one'></div>
+                    </div>
+                    <div>
+                        <div onClick={this.onChangeColor} className='color_two'></div>
+                    </div>
+                    <div>
+                        <div onClick={this.onChangeColor} className='color_tree'></div>
+                    </div>
+                    <div>
+                        <div onClick={this.onChangeColor} className='color_for'></div>
+                    </div>
+                    <div>
+                        <div onClick={this.onChangeColor} className='color_five'></div>
+                    </div>
+                    <div>
+                        <div onClick={this.onChangeColor} className='color_six'></div>
+                    </div>
+                    <div>
+                        <div onClick={this.onChangeColor} className='color_seven'></div>
+                    </div>
                 </div>
                 <Link to="/step3">
                     <button type='button'
