@@ -1,6 +1,6 @@
 const initialState={
     gender:'',
-    color_scheme:'',
+    color_scheme:'one',
     step_second:false,
 };
 

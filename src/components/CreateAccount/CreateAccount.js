@@ -22,7 +22,6 @@ class CreateAccount extends Component {
 
     };
     onChangeStep = () => {
-        document.getElementById('step3').checked = true;
         // this.props.setStep(true);
     };
     render() {

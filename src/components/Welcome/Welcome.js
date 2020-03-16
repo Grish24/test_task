@@ -1,10 +1,21 @@
 import React, {Component} from 'react';
 import './Welcome.scss'
 import logout from '../../assets/images/logout.svg'
-import { ReactComponent as Logo } from '../../assets/images/hoory_grey.svg'
 import {Link} from 'react-router-dom'
 
+
+const path = '../../assets/images/hooryIcons/';
+
 class Welcome extends Component {
+    images = {
+      'one': `${path+'female-1.svg'}`,
+      'two': `${path+'female-2.svg'}`,
+      'three': `${path+'female-3.svg'}`,
+      'four': `${path+'female-4.svg'}`,
+      'five': `${path+'female-5.svg'}`,
+      'six': `${path+'female-6.svg'}`,
+      'seven': `${path+'female-7.svg'}`,
+    };
     render() {
         return (
             <div className='welcome_container'>
@@ -19,7 +30,7 @@ class Welcome extends Component {
                 <div className='welcome_wrapper'>
                     <div className='welcome_block'>
                         <div className='hoory_logo'>
-                            <Logo />
+                            <img src={this.images[this.props.color]} alt=""/>
                         </div>
                         <h2 className='title'>hoory</h2>
                         <h3>
