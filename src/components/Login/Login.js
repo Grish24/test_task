@@ -54,7 +54,7 @@ class Login extends Component {
                 >
                     Sign In
                 </button>
-                <p className='sign_in_text'>Don՞t have an account? <Link to='/step1'>Sign Up</Link></p>
+                <p className='sign_in_text'>Don՞t have an account? <Link to='/registration/step1'>Sign Up</Link></p>
                 <p className='sign_in_text'><a href="">Forgot password?</a></p>
             </div>
         );

@@ -139,7 +139,7 @@ class CreateStyle extends Component {
                         <div  className='color_seven'> </div>
                     </div>
                 </div>
-                <Link to="/step3">
+                <Link to="/registration/step3">
                     <button type='button'
                             className='submit_button'
                             onClick={this.onChangeStep}

@@ -53,7 +53,7 @@ class CreateAccount extends Component {
                     </div>
                 </form>
                 <p className='about_text'>By registering an account with us you agree to the PP and T&C</p>
-                <Link to="/step4">
+                <Link to="/registration/step4">
                     <button type='button'
                             className='submit_button'
                             onClick={this.onChangeStep}

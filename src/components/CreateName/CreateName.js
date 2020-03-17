@@ -23,7 +23,7 @@ class CreateName extends Component {
                     <input type="text" className="form_input" id="name" placeholder="Hoory" required=""
                            onChange={this.onChangeName}/>
                 </div>
-                <Link to="/step2">
+                <Link to="/registration/step2">
                     <button type='button'
                             className='submit_button'
                             onClick={this.onChangeStep}
