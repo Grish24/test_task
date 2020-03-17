@@ -16,7 +16,7 @@ export const createStyle = (state = initialState,action) => {
               ...state,
               color_scheme: action.payload
           };
-      case 'NEXT_STEP' :
+      case 'NEXT_STEP_SECOND' :
           return {
               ...state,
               step_second: action.payload

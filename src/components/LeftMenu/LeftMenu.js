@@ -1,17 +1,24 @@
 import React, {Component} from 'react';
 import './LeftMenu.scss'
-import logo from '../assets/images/hoory_logo_white.png'
+import logo from '../../assets/images/hoory_logo_white.png'
 
 
 class LeftMenu extends Component {
+
     render() {
+
         return (
             <div className='left_menu'>
                 <img src={logo} alt=""/>
                 <div className='splitter'></div>
                 <div>
                     <div className='custom_checkbox'>
-                        <input className="inp-cbx" id="step1" disabled type="checkbox"/>
+                        <input id="step1"
+                               className="inp-cbx"
+                               type="checkbox"
+                               disabled
+                               checked={this.props.store.createName.step_first}
+                               />
                         <label className="cbx"
                                htmlFor="step1">
                             <span>
@@ -23,7 +30,12 @@ class LeftMenu extends Component {
                         </label>
                     </div>
                     <div className='custom_checkbox'>
-                        <input className="inp-cbx" id="step2" disabled type="checkbox"/>
+                        <input id="step2"
+                               className="inp-cbx"
+                               type="checkbox"
+                               disabled
+                               checked={this.props.store.createStyle.step_second}
+                        />
                         <label className="cbx"
                                htmlFor="step2">
                             <span>
@@ -35,7 +47,12 @@ class LeftMenu extends Component {
                         </label>
                     </div>
                     <div className='custom_checkbox'>
-                        <input className="inp-cbx" id="step3" disabled type="checkbox"/>
+                        <input id="step3"
+                               className="inp-cbx"
+                               type="checkbox"
+                               disabled
+                               checked={this.props.store.createAccount.step_third}
+                        />
                         <label className="cbx"
                                htmlFor="step3">
                             <span>

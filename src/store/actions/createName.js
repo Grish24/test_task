@@ -3,6 +3,6 @@ export const setCreateName = name => ({
         payload:name
 });
 export const setStep = value => ({
-    type : 'NEXT_STEP',
+    type : 'NEXT_STEP_FIRST',
     payload:value
 });

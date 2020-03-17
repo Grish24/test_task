@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import CreateStyle from "./CreateStyle";
-import {setCreatGender, setCreateColor} from "../../store/actions/createStyle";
+import {setCreatGender, setCreateColor,setStep} from "../../store/actions/createStyle";
 
 class CreateStyleContainer extends Component {
     render() {
@@ -9,6 +9,7 @@ class CreateStyleContainer extends Component {
             <CreateStyle name={this.props.name}
                          setCreatGender={this.props.setCreatGender}
                          setCreateColor={this.props.setCreateColor}
+                         setStep={this.props.setStep}
 
             />
         );
@@ -21,7 +22,8 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = {
     setCreatGender,
-    setCreateColor
+    setCreateColor,
+    setStep
 };
 
 export default connect(mapStateToProps,mapDispatchToProps)(CreateStyleContainer);

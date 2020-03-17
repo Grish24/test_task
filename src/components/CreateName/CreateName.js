@@ -8,7 +8,7 @@ class CreateName extends Component {
         this.props.setCreateName(event.target.value)
     };
     onChangeStep = () => {
-        // this.props.setStep(true);
+        this.props.setStep(true);
     };
 
     render() {

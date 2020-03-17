@@ -29,7 +29,7 @@ export  const createAccount = (state = initialState,action) => {
               ...state,
               password: action.payload
           };
-      case 'NEXT_STEP' :
+      case 'NEXT_STEP_THIRD' :
           return {
               ...state,
               step_third: action.payload

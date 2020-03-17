@@ -15,6 +15,6 @@ export const setPassword = value => ({
     payload:value
 });
 export const setStep = value => ({
-    type : 'NEXT_STEP',
+    type : 'NEXT_STEP_THIRD',
     payload:value
 });

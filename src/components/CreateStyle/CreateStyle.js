@@ -105,9 +105,10 @@ class CreateStyle extends Component {
         this.setState({
            color
         });
+        this.props.setCreateColor(this.state.color);
     };
     onChangeStep = () =>{
-        this.props.setCreateColor(this.state.color);
+        this.props.setStep(true);
     };
     render() {
         console.log(this)

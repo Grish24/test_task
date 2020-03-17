@@ -10,7 +10,7 @@ export const createName = (state = initialState, action) => {
                 ...state,
                 name: action.payload
             };
-        case 'NEXT_STEP' :
+        case 'NEXT_STEP_FIRST' :
             return {
                 ...state,
                 step_first: action.payload
