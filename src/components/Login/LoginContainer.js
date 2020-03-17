@@ -6,11 +6,13 @@ import {setEmail,setPassword} from '../../store/actions/login'
 class LoginContainer extends Component {
     render() {
         return (
-            <Login store={this.props.store}
+            <Login history={this.props.history}
+                   store={this.props.store}
                    email={this.props.email}
                    password={this.props.password}
                    setEmail={this.props.setEmail}
                    setPassword={this.props.setPassword}
+
             />
         );
     }

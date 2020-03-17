@@ -31,12 +31,14 @@ class Login extends Component {
     };
     login = () => {
         if (this.props.store.createAccount.email === this.props.email && this.props.store.createAccount.password === this.props.password) {
-
+                this.props.history.push('/welcome')
         } else {
             alert('wrong login or password')
         }
     };
+
     render() {
+        console.log(this.props);
         return (
             <div className='sign_in_account create_account'>
                 <div className='logo'>
@@ -52,17 +54,33 @@ class Login extends Component {
                 </div>
                 <form className='registration_form'>
                     <div className="form_group">
-                        <input type="text" className="form_input" id="email" placeholder="Email" value={this.props.email} required="" onChange={this.onChangeEmail} />
+                        <input type="text"
+                               className="form_input"
+                               placeholder="Email"
+                               value={this.props.email}
+                               onChange={this.onChangeEmail}
+                        />
                     </div>
                     <div className='form_wrapper'>
                         <div className="form_group">
-                            <input type="password" className="form_input" ref='password' id="password" placeholder="Password" value={this.props.password} required="" onChange={this.onChangePassword} />
-                            <span className="password_visibility_icon" onClick={this.showPassword}><img src={this.state.eye_icon ? eye_icon_invisible : eye_icon} alt=""/></span>
+                            <input type="password"
+                                   className="form_input"
+                                   ref='password'
+                                   placeholder="Password"
+                                   value={this.props.password}
+                                   onChange={this.onChangePassword}
+                            />
+                            <span className="password_visibility_icon"
+                                  onClick={this.showPassword}
+                            >
+                                <img src={this.state.eye_icon ? eye_icon_invisible : eye_icon} alt=""/>
+                            </span>
                         </div>
                     </div>
                 </form>
                 <button type='button'
                         className='submit_button'
+                        onKeyPress={this.login}
                         onClick={this.login}
                 >
                     Sign In

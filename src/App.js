@@ -13,7 +13,7 @@ class App extends Component {
             <BrowserRouter>
                 <section className='main_section'>
                     <Switch>
-                        <Route exact path="/login" component={LoginContainer}/>
+                        <Route exact path="/login" render={(props) => <LoginContainer {...props} />}/>
                         <Route path='/welcome' component={WelcomeContainer}/>
                         <Route path='/registration' component={Registration}/>
                         <Redirect to='/login'/>
