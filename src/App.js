@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import './App.scss';
 import {BrowserRouter} from 'react-router-dom'
-import {connect} from 'react-redux'
 import {Route, Switch,Redirect} from 'react-router-dom'
 import LoginContainer from "./components/Login/LoginContainer";
 import Registration from "./components/Registration/Registration";
@@ -23,11 +21,7 @@ class App extends Component {
         );
     }
 }
-const mapStateToProps = state => {
-    return {
-        step:state.createName.step_first
-    }
-};
 
 
-export default connect(mapStateToProps)(App);
+
+export default App;

@@ -38,7 +38,6 @@ class Login extends Component {
     };
 
     render() {
-        console.log(this.props);
         return (
             <div className='sign_in_account create_account'>
                 <div className='logo'>
@@ -86,7 +85,7 @@ class Login extends Component {
                     Sign In
                 </button>
                 <p className='sign_in_text'>Don՞t have an account? <Link to='/registration/step1'>Sign Up</Link></p>
-                <p className='sign_in_text'><a href="">Forgot password?</a></p>
+                <p className='sign_in_text'><a href="/#">Forgot password?</a></p>
             </div>
         );
     }

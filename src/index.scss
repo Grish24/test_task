@@ -1,10 +1,14 @@
-
 html,body,#root{
   height: 100%;
 }
 body {
   color: #444444;
   font-family: 'roboto-regular', sans-serif;
+}
+
+.main_section {
+  display: flex;
+  height: 100%;
 }
 .sign_in_account{
   align-self: center;
