@@ -3,9 +3,13 @@ import google_icon from "../../assets/images/google_icon.svg";
 import {Link} from "react-router-dom";
 import '../CreateAccount/CreateAccount.scss'
 import logo from '../../assets/images/hoory_logo.svg'
-import eye_icon from "../../assets/images/password_visibility_icon.svg";
+import eye_icon from "../../assets/images/eye_icon.svg";
+import eye_icon_invisible from "../../assets/images/eye_icon_invisible.svg";
 
 class Login extends Component {
+    state={
+        eye_icon:false
+    };
     onChangeEmail = (event) => {
         this.props.setEmail(event.target.value);
     };
@@ -13,7 +17,17 @@ class Login extends Component {
         this.props.setPassword(event.target.value);
     };
     showPassword = () => {
-        this.refs.password.type === 'password' ? this.refs.password.type = 'text' :  this.refs.password.type = 'password';
+        if (this.refs.password.type === 'password'){
+            this.refs.password.type = 'text';
+            this.setState({
+                eye_icon:true
+            })
+        } else {
+            this.refs.password.type = 'password';
+            this.setState({
+                eye_icon:false
+            })
+        }
     };
     login = () => {
         if (this.props.store.createAccount.email === this.props.email && this.props.store.createAccount.password === this.props.password) {
@@ -23,7 +37,6 @@ class Login extends Component {
         }
     };
     render() {
-        console.log(this.props)
         return (
             <div className='sign_in_account create_account'>
                 <div className='logo'>
@@ -44,7 +57,7 @@ class Login extends Component {
                     <div className='form_wrapper'>
                         <div className="form_group">
                             <input type="password" className="form_input" ref='password' id="password" placeholder="Password" value={this.props.password} required="" onChange={this.onChangePassword} />
-                            <span className="password_visibility_icon" onClick={this.showPassword}><img src={eye_icon} alt=""/></span>
+                            <span className="password_visibility_icon" onClick={this.showPassword}><img src={this.state.eye_icon ? eye_icon_invisible : eye_icon} alt=""/></span>
                         </div>
                     </div>
                 </form>

@@ -72,6 +72,10 @@
       z-index: 9999999;
       cursor: pointer;
       transform: translate(0, -50%);
+      img {
+        width: 22px;
+        height: 22px;
+      }
     }
   }
   .about_text{

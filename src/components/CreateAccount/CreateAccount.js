@@ -2,9 +2,13 @@ import React, {Component} from 'react';
 import './CreateAccount.scss'
 import {Link} from "react-router-dom";
 import google_icon from '../../assets/images/google_icon.svg';
-import eye_icon from '../../assets/images/password_visibility_icon.svg';
+import eye_icon from "../../assets/images/eye_icon.svg";
+import eye_icon_invisible from "../../assets/images/eye_icon_invisible.svg";
 
 class CreateAccount extends Component {
+    state={
+        eye_icon:false
+    };
 
     onChangeFirstName = (event) => {
         this.props.setFirstName(event.target.value)
@@ -19,7 +23,17 @@ class CreateAccount extends Component {
         this.props.setPassword(event.target.value)
     };
     showPassword = () =>{
-
+        if (this.refs.password.type === 'password'){
+            this.refs.password.type = 'text';
+            this.setState({
+                eye_icon:true
+            })
+        } else {
+            this.refs.password.type = 'password';
+            this.setState({
+                eye_icon:false
+            })
+        }
     };
     onChangeStep = () => {
         this.props.setStep(true);
@@ -48,7 +62,7 @@ class CreateAccount extends Component {
                     <div className='form_wrapper'>
                         <div className="form_group">
                             <input type="password" className="form_input" id="password" ref='password' placeholder="Password" value={this.props.password} required="" onChange={this.onChangePassword} />
-                            <span className="password_visibility_icon" onClick={this.showPassword}><img src={eye_icon} alt=""/></span>
+                            <span className="password_visibility_icon" onClick={this.showPassword}><img src={this.state.eye_icon ? eye_icon_invisible : eye_icon} alt=""/></span>
                         </div>
                     </div>
                 </form>
