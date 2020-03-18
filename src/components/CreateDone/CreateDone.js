@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './CreateDone.scss'
 import {Link} from "react-router-dom";
-import { ReactComponent as Logo } from '../../assets/images/hoory_grey.svg'
+import { ReactComponent as Logo } from '../../assets/images/hooryLogo/hoory_grey.svg'
 
 class CreateDone extends Component {
     render() {

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import google_icon from "../../assets/images/google_icon.svg";
 import {Link} from "react-router-dom";
 import '../CreateAccount/CreateAccount.scss'
-import logo from '../../assets/images/hoory_logo.svg'
+import logo from '../../assets/images/hooryLogo/hoory_logo.svg'
 import eye_icon from "../../assets/images/eye_icon.svg";
 import eye_icon_invisible from "../../assets/images/eye_icon_invisible.svg";
 

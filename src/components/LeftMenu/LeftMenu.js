@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './LeftMenu.scss'
-import logo from '../../assets/images/hoory_logo_white.png'
+import logo from '../../assets/images/hooryLogo/hoory_logo_white.png'
 
 
 class LeftMenu extends Component {

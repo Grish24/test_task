@@ -1,96 +1,66 @@
 import React, {Component, useState} from 'react';
 import './CreateStyle.scss'
 import {Link} from "react-router-dom";
-//
-// import {ReactComponent as female1} from '../../assets/images/hooryIcons/female-1.svg';
-// import {ReactComponent as female2} from '../../assets/images/hooryIcons/female-2.svg';
-// import {ReactComponent as female3} from '../../assets/images/hooryIcons/female-3.svg';
-// import {ReactComponent as female4} from '../../assets/images/hooryIcons/female-4.svg';
-// import {ReactComponent as female5} from '../../assets/images/hooryIcons/female-5.svg';
-// import {ReactComponent as female6} from '../../assets/images/hooryIcons/female-6.svg';
-// import {ReactComponent as female7} from '../../assets/images/hooryIcons/female-7.svg';
-// import {ReactComponent as female_selected_1} from '../../assets/images/hooryIcons/female-selected-1.svg';
-// import {ReactComponent as female_selected_2} from '../../assets/images/hooryIcons/female-selected-2.svg';
-// import {ReactComponent as female_selected_3} from '../../assets/images/hooryIcons/female-selected-3.svg';
-// import {ReactComponent as female_selected_4} from '../../assets/images/hooryIcons/female-selected-4.svg';
-// import {ReactComponent as female_selected_5} from '../../assets/images/hooryIcons/female-selected-5.svg';
-// import {ReactComponent as female_selected_6} from '../../assets/images/hooryIcons/female-selected-6.svg';
-// import {ReactComponent as female_selected_7} from '../../assets/images/hooryIcons/female-selected-7.svg';
-//
-// import {ReactComponent as male1} from '../../assets/images/hooryIcons/male-1.svg';
-// import {ReactComponent as male2} from '../../assets/images/hooryIcons/male-2.svg';
-// import {ReactComponent as male3} from '../../assets/images/hooryIcons/male-3.svg';
-// import {ReactComponent as male4} from '../../assets/images/hooryIcons/male-4.svg';
-// import {ReactComponent as male5} from '../../assets/images/hooryIcons/male-5.svg';
-// import {ReactComponent as male6} from '../../assets/images/hooryIcons/male-6.svg';
-// import {ReactComponent as male7} from '../../assets/images/hooryIcons/male-7.svg';
-// import {ReactComponent as male_selected_1} from '../../assets/images/hooryIcons/male-selected-1.svg';
-// import {ReactComponent as male_selected_2} from '../../assets/images/hooryIcons/male-selected-2.svg';
-// import {ReactComponent as male_selected_3} from '../../assets/images/hooryIcons/male-selected-3.svg';
-// import {ReactComponent as male_selected_4} from '../../assets/images/hooryIcons/male-selected-4.svg';
-// import {ReactComponent as male_selected_5} from '../../assets/images/hooryIcons/male-selected-5.svg';
-// import {ReactComponent as male_selected_6} from '../../assets/images/hooryIcons/male-selected-6.svg';
-// import {ReactComponent as male_selected_7} from '../../assets/images/hooryIcons/male-selected-7.svg';
+import {importAll} from'../../importAll';
 
-function importAll(r) {
-    return r.keys().map(r);
-}
-const images = importAll(require.context('../../assets/images/hooryIcons/', false, /\.(png|jpe?g|svg)$/));
+const femaleImages = importAll(require.context('../../assets/images/hooryIcons/female/unselected', false, /\.(png|jpe?g|svg)$/));
+const femaleImagesSelected = importAll(require.context('../../assets/images/hooryIcons/female/selected', false, /\.(png|jpe?g|svg)$/));
+const maleImages = importAll(require.context('../../assets/images/hooryIcons/male/unselected', false, /\.(png|jpe?g|svg)$/));
+const maleImagesSelected = importAll(require.context('../../assets/images/hooryIcons/male/selected', false, /\.(png|jpe?g|svg)$/));
 
 const GenderIconComponent = ({color,setImagePath}) => {
     const [selected, setSelected] = useState(true);
-    const [selected_male, setSelected_male] = useState(false);
+    const [selectedMale, setSelectedMale] = useState(false);
 
-    const mapping = {
-        1: images[0],
-        2: images[1],
-        3: images[2],
-        4: images[3],
-        5: images[4],
-        6: images[5],
-        7: images[6],
+    const femaleArray = {
+        1: femaleImages[0],
+        2: femaleImages[1],
+        3: femaleImages[2],
+        4: femaleImages[3],
+        5: femaleImages[4],
+        6: femaleImages[5],
+        7: femaleImages[6],
     };
-    const mapping_selected = {
-        1: images[7],
-        2: images[8],
-        3: images[9],
-        4: images[10],
-        5: images[11],
-        6: images[12],
-        7: images[13],
+    const femaleArraySelected = {
+        1: femaleImagesSelected[0],
+        2: femaleImagesSelected[1],
+        3: femaleImagesSelected[2],
+        4: femaleImagesSelected[3],
+        5: femaleImagesSelected[4],
+        6: femaleImagesSelected[5],
+        7: femaleImagesSelected[6],
     };
-    const mapping_male = {
-        1: images[14],
-        2: images[15],
-        3: images[16],
-        4: images[17],
-        5: images[18],
-        6: images[19],
-        7: images[20],
+    const maleArray = {
+        1: maleImages[0],
+        2: maleImages[1],
+        3: maleImages[2],
+        4: maleImages[3],
+        5: maleImages[4],
+        6: maleImages[5],
+        7: maleImages[6],
     };
-    const mapping_selected_male = {
-        1: images[21],
-        2: images[22],
-        3: images[23],
-        4: images[24],
-        5: images[25],
-        6: images[26],
-        7: images[27],
+    const maleArraySelected = {
+        1: maleImagesSelected[0],
+        2: maleImagesSelected[1],
+        3: maleImagesSelected[2],
+        4: maleImagesSelected[3],
+        5: maleImagesSelected[4],
+        6: maleImagesSelected[5],
+        7: maleImagesSelected[6],
     };
 
-    const female = (selected   ? mapping_selected : mapping)[color];
-    const male = (selected_male  ? mapping_selected_male : mapping_male)[color];
+    const female = (selected   ? femaleArraySelected : femaleArray)[color];
+    const male = (selectedMale ? maleArraySelected : maleArray)[color];
 
     const handleOnClick = () => {
         setSelected(true);
-        setSelected_male(false);
-        console.log(mapping[color]);
-        setImagePath(mapping[color]);
+        setSelectedMale(false);
+        setImagePath(femaleArray[color]);
     };
     const handleOnClickMale = () => {
         setSelected(false);
-        setSelected_male(true);
-        setImagePath(mapping_male[color]);
+        setSelectedMale(true);
+        setImagePath(maleArray[color]);
     };
     return (
         <div className='gender_icons'>

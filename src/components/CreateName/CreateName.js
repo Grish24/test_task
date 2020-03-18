@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
 import './CreateName.scss'
-import {ReactComponent as Logo} from '../../assets/images/hoory_grey.svg'
+import {ReactComponent as Logo} from '../../assets/images/hooryLogo/hoory_grey.svg'
 
 class CreateName extends Component {
     onChangeName = (event) => {
