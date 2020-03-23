@@ -9,7 +9,7 @@ class LeftMenu extends Component {
 
         return (
             <div className='left_menu'>
-                <img src={logo} alt=""/>
+                <img src={logo} alt="logo"/>
                 <div className='splitter'></div>
                 <div>
                     <div className='custom_checkbox'>

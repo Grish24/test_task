@@ -30,7 +30,8 @@ class Login extends Component {
         }
     };
     login = () => {
-        if (this.props.store.createAccount.email === this.props.email && this.props.store.createAccount.password === this.props.password) {
+        if (this.props.store.createAccount.email === this.props.email &&
+            this.props.store.createAccount.password === this.props.password) {
                 this.props.history.push('/welcome')
         } else {
             alert('wrong login or password')
@@ -41,11 +42,11 @@ class Login extends Component {
         return (
             <div className='sign_in_account create_account'>
                 <div className='logo'>
-                    <img src={logo} alt=""/>
+                    <img src={logo} alt="logo"/>
                 </div>
                 <h3>Sign in to your account</h3>
                 <button className='google_sign_up'>
-                    <img src={google_icon} alt=""/>
+                    <img src={google_icon} alt="googleIcon"/>
                     Sign in with Google
                 </button>
                 <div className='splitter'>
@@ -72,7 +73,7 @@ class Login extends Component {
                             <span className="password_visibility_icon"
                                   onClick={this.showPassword}
                             >
-                                <img src={this.state.eye_icon ? eye_icon_invisible : eye_icon} alt=""/>
+                                <img src={this.state.eye_icon ? eye_icon_invisible : eye_icon} alt="eye_icon"/>
                             </span>
                         </div>
                     </div>

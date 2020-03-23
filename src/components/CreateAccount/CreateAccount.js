@@ -43,7 +43,7 @@ class CreateAccount extends Component {
             <div className='create_account'>
                 <h3>Create your account</h3>
                 <button className='google_sign_up'>
-                    <img src={google_icon} alt=""/>
+                    <img src={google_icon} alt="googleIcon"/>
                     Sign Up with Google
                 </button>
                 <div className='splitter'>
@@ -52,17 +52,49 @@ class CreateAccount extends Component {
                 <form className='registration_form'>
                     <div className="form_group">
                         <div className='form_group_name'>
-                            <input type="text" className="form_input" id="first_name" placeholder="First name" value={this.props.name} required="" onChange={this.onChangeFirstName} />
-                            <input type="text" className="form_input" id="last_name" placeholder="Last name" value={this.props.last_name} required="" onChange={this.onChangeLastName} />
+                            <input type="text"
+                                   id="first_name"
+                                   className="form_input"
+                                   placeholder="First name"
+                                   required
+                                   value={this.props.name}
+                                   onChange={this.onChangeFirstName}
+                            />
+                            <input type="text"
+                                   id="last_name"
+                                   className="form_input"
+                                   placeholder="Last name"
+                                   required
+                                   value={this.props.last_name}
+                                   onChange={this.onChangeLastName}
+                            />
                         </div>
                     </div>
                     <div className="form_group">
-                        <input type="email" className="form_input" id="email" placeholder="Email" required="" value={this.props.email} onChange={this.onChangeEmail} />
+                        <input type="email"
+                               id="email"
+                               className="form_input"
+                               required
+                               placeholder="Email"
+                               value={this.props.email}
+                               onChange={this.onChangeEmail}
+                        />
                     </div>
                     <div className='form_wrapper'>
                         <div className="form_group">
-                            <input type="password" className="form_input" id="password" ref='password' placeholder="Password" value={this.props.password} required="" onChange={this.onChangePassword} />
-                            <span className="password_visibility_icon" onClick={this.showPassword}><img src={this.state.eye_icon ? eye_icon_invisible : eye_icon} alt=""/></span>
+                            <input type="password"
+                                   id="password"
+                                   className="form_input"
+                                   ref='password'
+                                   required
+                                   placeholder="Password"
+                                   value={this.props.password}
+                                   onChange={this.onChangePassword}
+                            />
+                            <span className="password_visibility_icon"
+                                  onClick={this.showPassword}>
+                                <img src={this.state.eye_icon ? eye_icon_invisible : eye_icon} alt="eye_icon"/>
+                            </span>
                         </div>
                     </div>
                 </form>

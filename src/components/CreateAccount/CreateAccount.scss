@@ -47,7 +47,7 @@
       font-size: 16px;
       color: #444444;
       text-align: left;
-      &::placeholder { /* Most modern browsers support this now. */
+      &::placeholder {
         color:#9D9D9E;
         font-weight: normal;
       }

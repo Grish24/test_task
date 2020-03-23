@@ -14,7 +14,8 @@ class CreateDone extends Component {
 
                 <p className='done_text'>
                     You have successfully setup the Hoory widget on your website! <br/>
-                    Proceed to Admin Dashboard to start training {this.props.name ? this.props.name : '%name%'}
+                    Proceed to Admin Dashboard to start training {this.props.name ? this.props.name :
+                    '%name%'}
                 </p>
                 <Link to="/login">
                     <button type='button'

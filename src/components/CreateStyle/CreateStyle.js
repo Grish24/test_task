@@ -1,16 +1,20 @@
-import React, {Component, useState} from 'react';
+import React, {Component, useState, useEffect} from 'react';
 import './CreateStyle.scss'
 import {Link} from "react-router-dom";
-import {importAll} from'../../importAll';
+import {importAll} from '../../importAll';
 
 const femaleImages = importAll(require.context('../../assets/images/hooryIcons/female/unselected', false, /\.(png|jpe?g|svg)$/));
 const femaleImagesSelected = importAll(require.context('../../assets/images/hooryIcons/female/selected', false, /\.(png|jpe?g|svg)$/));
 const maleImages = importAll(require.context('../../assets/images/hooryIcons/male/unselected', false, /\.(png|jpe?g|svg)$/));
 const maleImagesSelected = importAll(require.context('../../assets/images/hooryIcons/male/selected', false, /\.(png|jpe?g|svg)$/));
 
-const GenderIconComponent = ({color,setImagePath}) => {
+const GenderIconComponent = ({color, setImagePath}) => {
     const [selected, setSelected] = useState(true);
     const [selectedMale, setSelectedMale] = useState(false);
+
+    useEffect(() => {
+        selected ? setImagePath(femaleArray[color]) : setImagePath(maleArray[color]);
+    });
 
     const femaleArray = {
         1: femaleImages[0],
@@ -49,23 +53,21 @@ const GenderIconComponent = ({color,setImagePath}) => {
         7: maleImagesSelected[6],
     };
 
-    const female = (selected   ? femaleArraySelected : femaleArray)[color];
+    const female = (selected ? femaleArraySelected : femaleArray)[color];
     const male = (selectedMale ? maleArraySelected : maleArray)[color];
 
     const handleOnClick = () => {
         setSelected(true);
         setSelectedMale(false);
-        setImagePath(femaleArray[color]);
     };
     const handleOnClickMale = () => {
         setSelected(false);
         setSelectedMale(true);
-        setImagePath(maleArray[color]);
     };
     return (
         <div className='gender_icons'>
-           <img src={female} alt='' onClick={handleOnClick}/>
-           <img src={male} alt='' onClick={handleOnClickMale}/>
+            <img src={female} alt='femaleIcon' onClick={handleOnClick}/>
+            <img src={male} alt='maleIcon' onClick={handleOnClickMale}/>
         </div>
     )
 };
@@ -73,17 +75,18 @@ const GenderIconComponent = ({color,setImagePath}) => {
 
 class CreateStyle extends Component {
 
-    state={
-        color:1,
+    state = {
+        color: 1,
     };
     onChangeColor = (color) => {
         this.setState({
-           color
+            color
         });
     };
-    onChangeStep = () =>{
+    onChangeStep = () => {
         this.props.setStep(true);
     };
+
     render() {
         return (
             <div className='create_style'>
@@ -94,25 +97,25 @@ class CreateStyle extends Component {
                 <h3>Select color scheme</h3>
                 <div className='color_icons'>
                     <div className={this.state.color === 1 ? 'color_border' : ''} onClick={() => this.onChangeColor(1)}>
-                        <div className='color_one'> </div>
+                        <div className='color_one'></div>
                     </div>
                     <div className={this.state.color === 2 ? 'color_border' : ''} onClick={() => this.onChangeColor(2)}>
-                        <div  className='color_two'> </div>
+                        <div className='color_two'></div>
                     </div>
                     <div className={this.state.color === 3 ? 'color_border' : ''} onClick={() => this.onChangeColor(3)}>
-                        <div  className='color_three'> </div>
+                        <div className='color_three'></div>
                     </div>
                     <div className={this.state.color === 4 ? 'color_border' : ''} onClick={() => this.onChangeColor(4)}>
-                        <div  className='color_four'> </div>
+                        <div className='color_four'></div>
                     </div>
                     <div className={this.state.color === 5 ? 'color_border' : ''} onClick={() => this.onChangeColor(5)}>
-                        <div  className='color_five'> </div>
+                        <div className='color_five'></div>
                     </div>
                     <div className={this.state.color === 6 ? 'color_border' : ''} onClick={() => this.onChangeColor(6)}>
-                        <div  className='color_six'> </div>
+                        <div className='color_six'></div>
                     </div>
                     <div className={this.state.color === 7 ? 'color_border' : ''} onClick={() => this.onChangeColor(7)}>
-                        <div  className='color_seven'> </div>
+                        <div className='color_seven'></div>
                     </div>
                 </div>
                 <Link to="/registration/step3">

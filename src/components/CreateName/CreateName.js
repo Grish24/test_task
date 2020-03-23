@@ -20,7 +20,11 @@ class CreateName extends Component {
                 <h2 className='title'>hoory</h2>
                 <div className="form_group">
                     <label htmlFor="name" className="form_label">Name your assistant</label>
-                    <input type="text" className="form_input" id="name" placeholder="Hoory" required=""
+                    <input type="text"
+                           id="name"
+                           className="form_input"
+                           placeholder="Hoory"
+                           required
                            onChange={this.onChangeName}/>
                 </div>
                 <Link to="/registration/step2">

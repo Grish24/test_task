@@ -7,21 +7,20 @@ import {Link} from 'react-router-dom'
 class Welcome extends Component {
 
     render() {
-        console.log(this.props);
         return (
             <div className='welcome_container'>
                 <div className='logout_wrapper'>
                     <Link to='/login'>
                         <button className='logout_button'>
                             Logout
-                            <img src={logout} alt=""/>
+                            <img src={logout} alt="logout"/>
                         </button>
                     </Link>
                 </div>
                 <div className='welcome_wrapper'>
                     <div className='welcome_block'>
                         <div className='hoory_logo'>
-                            <img src={this.props.imagePath} alt=""/>
+                            <img src={this.props.imagePath} alt="hooryIcon"/>
                         </div>
                         <h2 className='title'>
                             {this.props.store.createName.name ? this.props.store.createName.name : 'hoory'}
